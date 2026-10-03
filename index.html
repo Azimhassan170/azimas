@@ -30,14 +30,14 @@
             content="Import your current bot or learn how to create a trading bot from scratch with our detailed guides, FAQs, and tutorials. Start with a quick strategy!"
         />
         <title>Automate Your Trades | Deriv Bot</title>
-        <style>
-            :root {
-                font-size: 62.5%;
-            }
-        </style>
-    </head>
+        // Deriv Configuration
+const APP_ID = '1089';
+const REDIRECT_URI = window.location.origin + window.location.pathname;
 
-    <body class="body theme theme--light">
+function loginWithDeriv() {
+    const authUrl = `https://oauth.deriv.com/oauth2/authorize?app_id=${APP_ID}&l=EN&brand=deriv&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
+    window.location.href = authUrl;
+}
         <!-- Google Tag Manager (noscript) -->
         <noscript
             ><iframe
